@@ -5,7 +5,7 @@
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
 
 <!-- Plugin description -->
-IntelliJ IDEA plugin for [Spaceport](https://spaceport.dev), a full-stack web framework.
+IntelliJ IDEA plugin for [Spaceport](https://www.spaceport.sh), a full-stack web framework.
 
 ## Features
 
