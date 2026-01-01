@@ -11,5 +11,21 @@
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow factoryClass="com.github.aufdemrand.spaceportsupport.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
         <postStartupActivity implementation="com.github.aufdemrand.spaceportsupport.startup.MyProjectActivity" />
+        <fileType name="Launchpad Template" implementationClass="com.github.aufdemrand.spaceportsupport.LaunchpadFileType" fieldName="INSTANCE" language="Launchpad" extensions="ghtml"/>
+        <lang.syntaxHighlighter language="Launchpad" implementationClass="com.github.aufdemrand.spaceportsupport.LaunchpadSyntaxHighlighter"/>
+        <completion.contributor language="Launchpad" implementationClass="com.github.aufdemrand.spaceportsupport.LaunchpadCompletionContributor"/>
+        <iconProvider implementation="com.github.aufdemrand.spaceportsupport.SpaceportIconProvider"/>
     </extensions>
+
+    <actions>
+        <group id="SpaceportMarkAsGroup" text="Mark Directory As" popup="true">
+            <add-to-group group-id="MarkRootGroup" anchor="after" relative-to-action="MarkSourceRootGroup"/>
+            <action id="Spaceport.MarkAsLaunchpad" class="com.github.aufdemrand.spaceportsupport.actions.MarkAsLaunchpadAction"/>
+            <action id="Spaceport.MarkAsAssets" class="com.github.aufdemrand.spaceportsupport.actions.MarkAsAssetsAction"/>
+        </group>
+        <group id="SpaceportMarkFileAsGroup" text="Spaceport" popup="true">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+            <action id="Spaceport.MarkAsManifest" class="com.github.aufdemrand.spaceportsupport.actions.MarkAsManifestAction"/>
+        </group>
+    </actions>
 </idea-plugin>
